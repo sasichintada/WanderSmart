@@ -103,9 +103,6 @@ WanderSmart/
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
-## 📸 Screenshots
 
 ### Login Page
 ![Login Page](screenshots/login.png)
