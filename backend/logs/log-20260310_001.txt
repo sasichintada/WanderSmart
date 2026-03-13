@@ -1,0 +1,981 @@
+2026-03-10 21:19:21.240 +05:30 [INF] Starting application
+2026-03-10 21:19:21.339 +05:30 [INF] User profile is available. Using 'C:\Users\sasi chintada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-10 21:19:21.495 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5116: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-10 21:19:21.523 +05:30 [FTL] Application failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5116: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in C:\Users\sasi chintada\wandersmart\backend\Program.cs:line 121
+2026-03-10 21:21:17.503 +05:30 [INF] Starting application
+2026-03-10 21:21:17.610 +05:30 [INF] User profile is available. Using 'C:\Users\sasi chintada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-10 21:21:17.754 +05:30 [INF] Now listening on: http://localhost:5116
+2026-03-10 21:21:17.760 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-10 21:21:17.762 +05:30 [INF] Hosting environment: Development
+2026-03-10 21:21:17.767 +05:30 [INF] Content root path: C:\Users\sasi chintada\wandersmart\backend
+2026-03-10 21:21:29.104 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/ - null null
+2026-03-10 21:21:29.246 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-10 21:21:29.324 +05:30 [INF] Executing endpoint 'HTTP: GET /'
+2026-03-10 21:21:29.334 +05:30 [INF] Executing RedirectResult, redirecting to /swagger.
+2026-03-10 21:21:29.336 +05:30 [INF] Executed endpoint 'HTTP: GET /'
+2026-03-10 21:21:29.341 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/ - 302 0 null 241.1507ms
+2026-03-10 21:21:29.355 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/index.html - null null
+2026-03-10 21:21:29.490 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/index.html - 200 null text/html;charset=utf-8 134.7598ms
+2026-03-10 21:21:29.591 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - null null
+2026-03-10 21:21:29.824 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 232.769ms
+2026-03-10 21:23:24.901 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:24.980 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:24.982 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:25.038 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:25.058 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:25.064 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 167.9985ms
+2026-03-10 21:23:25.081 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:25.096 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:25.100 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:25.121 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:25.127 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:25.129 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 47.8646ms
+2026-03-10 21:23:27.449 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:27.825 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:27.826 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:28.586 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:28.675 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:29.145 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 1696.355ms
+2026-03-10 21:23:29.182 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:29.185 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:29.187 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:29.194 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:29.198 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:29.199 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 17.6911ms
+2026-03-10 21:23:37.180 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:37.185 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:37.186 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:37.187 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:37.189 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:37.191 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 10.9607ms
+2026-03-10 21:23:45.225 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:23:45.240 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:23:45.243 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:23:45.248 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:23:45.250 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:23:45.254 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 29.4154ms
+2026-03-10 21:24:07.206 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:24:07.212 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:24:07.216 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:24:07.221 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:24:07.226 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:24:07.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 24.2908ms
+2026-03-10 21:24:22.651 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 21:24:22.678 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:24:22.684 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:24:22.692 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 40.6704ms
+2026-03-10 21:25:32.699 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/test - null null
+2026-03-10 21:25:32.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/test - 404 0 null 41.4672ms
+2026-03-10 21:25:32.766 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/test, Response status code: 404
+2026-03-10 21:25:58.854 +05:30 [INF] Application is shutting down...
+2026-03-10 21:26:09.600 +05:30 [INF] Starting application
+2026-03-10 21:26:09.668 +05:30 [INF] User profile is available. Using 'C:\Users\sasi chintada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-10 21:26:09.743 +05:30 [INF] Now listening on: http://localhost:5116
+2026-03-10 21:26:09.745 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-10 21:26:09.746 +05:30 [INF] Hosting environment: Development
+2026-03-10 21:26:09.746 +05:30 [INF] Content root path: C:\Users\sasi chintada\wandersmart\backend
+2026-03-10 21:26:35.919 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:36.037 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-10 21:26:36.044 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:36.047 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:36.125 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:36.137 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:36.146 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:36.177 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:36.188 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:36.218 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:36.220 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:36.249 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 126.062ms
+2026-03-10 21:26:36.249 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 332.0071ms
+2026-03-10 21:26:38.259 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:38.265 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:38.267 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:38.279 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:38.282 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:38.287 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 28.4752ms
+2026-03-10 21:26:40.258 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:40.283 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:40.285 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:40.287 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:40.293 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:40.295 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 36.134ms
+2026-03-10 21:26:46.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:46.302 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:46.305 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:46.308 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:46.311 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:46.316 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 23.3063ms
+2026-03-10 21:26:49.672 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 21:26:49.712 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:49.736 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:49.746 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 74.6879ms
+2026-03-10 21:26:56.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:26:56.313 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:26:56.315 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:26:56.319 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:26:56.322 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:26:56.324 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 20.8527ms
+2026-03-10 21:27:04.975 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:27:04.978 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:27:04.979 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:27:04.981 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:27:04.982 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:27:04.994 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 10.2909ms
+2026-03-10 21:27:16.334 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:27:16.343 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:27:16.345 +05:30 [INF] Request origin http://localhost:59792 does not have permission to access the resource.
+2026-03-10 21:27:16.346 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:27:16.350 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:27:16.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 62.8706ms
+2026-03-10 21:28:44.833 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:28:44.863 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:28:44.936 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:28:44.951 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:28:44.954 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:28:44.965 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 132.9177ms
+2026-03-10 21:28:44.996 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:28:45.017 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:28:45.029 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:28:45.035 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:28:45.041 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:28:45.046 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 49.8376ms
+2026-03-10 21:28:46.997 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:28:47.038 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:28:47.300 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:28:47.861 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:28:48.350 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:28:48.524 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 1526.6518ms
+2026-03-10 21:28:49.252 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:28:49.261 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:28:49.263 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:28:49.266 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:28:49.269 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:28:49.275 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 22.1497ms
+2026-03-10 21:28:56.613 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:28:56.620 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:28:56.624 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:28:56.629 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:28:56.635 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:28:56.640 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 24.4016ms
+2026-03-10 21:29:05.294 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:29:05.299 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:29:05.301 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:29:05.305 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:29:05.314 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:29:05.319 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 24.5694ms
+2026-03-10 21:29:19.974 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - null null
+2026-03-10 21:29:19.984 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:29:19.986 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:29:19.997 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - 204 null null 22.4844ms
+2026-03-10 21:29:26.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:29:26.794 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:29:26.796 +05:30 [INF] Request origin http://localhost:56375 does not have permission to access the resource.
+2026-03-10 21:29:26.798 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:29:26.815 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:29:26.830 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 39.2005ms
+2026-03-10 21:35:57.571 +05:30 [INF] Application is shutting down...
+2026-03-10 21:39:57.302 +05:30 [INF] Starting application
+2026-03-10 21:39:57.459 +05:30 [INF] User profile is available. Using 'C:\Users\sasi chintada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-10 21:39:57.623 +05:30 [INF] Now listening on: http://localhost:5116
+2026-03-10 21:39:57.629 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-10 21:39:57.631 +05:30 [INF] Hosting environment: Development
+2026-03-10 21:39:57.634 +05:30 [INF] Content root path: C:\Users\sasi chintada\wandersmart\backend
+2026-03-10 21:40:03.163 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/ - null null
+2026-03-10 21:40:03.365 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-10 21:40:03.435 +05:30 [INF] Executing endpoint 'HTTP: GET /'
+2026-03-10 21:40:03.444 +05:30 [INF] Executing RedirectResult, redirecting to /swagger.
+2026-03-10 21:40:03.447 +05:30 [INF] Executed endpoint 'HTTP: GET /'
+2026-03-10 21:40:03.452 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/ - 302 0 null 293.3454ms
+2026-03-10 21:40:03.471 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/index.html - null null
+2026-03-10 21:40:03.789 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/index.html - 200 null text/html;charset=utf-8 317.2331ms
+2026-03-10 21:40:03.953 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - null null
+2026-03-10 21:40:04.214 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 261.0993ms
+2026-03-10 21:40:22.978 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/register - application/json 133
+2026-03-10 21:40:22.999 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:40:23.006 +05:30 [INF] Request origin http://localhost:5116 does not have permission to access the resource.
+2026-03-10 21:40:23.018 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:40:23.057 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.UserDTO]] Register(wanderSmart.Backend.DTOs.RegisterDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:40:23.471 +05:30 [ERR] Error during registration for testuser
+System.InvalidOperationException: Email already registered
+   at wanderSmart.Backend.Services.AuthService.RegisterAsync(RegisterDTO registerDto) in C:\Users\sasi chintada\wandersmart\backend\Services\AuthService.cs:line 100
+2026-03-10 21:40:23.547 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-10 21:40:23.596 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend) in 519.7653ms
+2026-03-10 21:40:23.601 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:40:23.613 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/register - 400 null application/json; charset=utf-8 634.8644ms
+2026-03-10 21:40:31.794 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/register - application/json 134
+2026-03-10 21:40:31.800 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:40:31.801 +05:30 [INF] Request origin http://localhost:5116 does not have permission to access the resource.
+2026-03-10 21:40:31.814 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:40:31.818 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.UserDTO]] Register(wanderSmart.Backend.DTOs.RegisterDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:40:32.146 +05:30 [ERR] Error during registration for testuser
+System.InvalidOperationException: Username already taken
+   at wanderSmart.Backend.Services.AuthService.RegisterAsync(RegisterDTO registerDto) in C:\Users\sasi chintada\wandersmart\backend\Services\AuthService.cs:line 106
+2026-03-10 21:40:32.152 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-10 21:40:32.159 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend) in 331.1343ms
+2026-03-10 21:40:32.163 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:40:32.167 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/register - 400 null application/json; charset=utf-8 373.1347ms
+2026-03-10 21:41:09.193 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/register - application/json 176
+2026-03-10 21:41:09.201 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:41:09.202 +05:30 [INF] Request origin http://localhost:5116 does not have permission to access the resource.
+2026-03-10 21:41:09.209 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:41:09.211 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.UserDTO]] Register(wanderSmart.Backend.DTOs.RegisterDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:41:09.226 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 21:41:09.271 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend) in 56.2339ms
+2026-03-10 21:41:09.278 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:41:09.281 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/register - 400 null application/problem+json; charset=utf-8 87.5098ms
+2026-03-10 21:41:37.064 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/register - application/json 142
+2026-03-10 21:41:37.069 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:41:37.074 +05:30 [INF] Request origin http://localhost:5116 does not have permission to access the resource.
+2026-03-10 21:41:37.076 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:41:37.079 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.UserDTO]] Register(wanderSmart.Backend.DTOs.RegisterDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:41:38.881 +05:30 [INF] User registered successfully: renuka123
+2026-03-10 21:41:38.893 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.UserDTO'.
+2026-03-10 21:41:38.915 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend) in 1799.3581ms
+2026-03-10 21:41:38.920 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:41:38.925 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/register - 200 null application/json; charset=utf-8 1860.9908ms
+2026-03-10 21:42:43.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:42:43.344 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:42:43.347 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:42:43.367 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:42:43.384 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:42:43.388 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 50.0413ms
+2026-03-10 21:42:43.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:42:43.449 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:42:43.453 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:42:43.473 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:42:43.479 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:42:43.482 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 41.9445ms
+2026-03-10 21:42:45.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:42:45.461 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:42:45.463 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:42:45.470 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:42:45.480 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:42:45.483 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 29.6194ms
+2026-03-10 21:42:47.682 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:42:47.691 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:42:47.693 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:42:47.696 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:42:47.700 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:42:47.702 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 19.6427ms
+2026-03-10 21:42:53.504 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:42:53.509 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:42:53.513 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:42:53.529 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:42:53.541 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:42:53.544 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 40.5501ms
+2026-03-10 21:43:03.711 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:43:03.720 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:43:03.724 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:43:03.729 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:43:03.731 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:43:03.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 31.3421ms
+2026-03-10 21:43:16.474 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - null null
+2026-03-10 21:43:16.485 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:43:16.486 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:43:16.494 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - 204 null null 20.3409ms
+2026-03-10 21:43:23.788 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:43:23.793 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:43:23.794 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:43:23.802 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:43:23.804 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:43:23.818 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 27.6876ms
+2026-03-10 21:43:49.254 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/login - application/json 75
+2026-03-10 21:43:49.260 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:43:49.262 +05:30 [INF] Request origin http://localhost:5116 does not have permission to access the resource.
+2026-03-10 21:43:49.271 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 21:43:49.296 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.LoginResponseDTO]] Login(wanderSmart.Backend.DTOs.LoginDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:43:51.152 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.LoginResponseDTO'.
+2026-03-10 21:43:51.173 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend) in 1871.8447ms
+2026-03-10 21:43:51.196 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 21:43:51.218 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/login - 200 null application/json; charset=utf-8 1963.2083ms
+2026-03-10 21:44:35.087 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 21:44:35.097 +05:30 [INF] CORS policy execution failed.
+2026-03-10 21:44:35.100 +05:30 [INF] Request origin http://localhost:59177 does not have permission to access the resource.
+2026-03-10 21:44:35.105 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 17.2113ms
+2026-03-10 21:46:35.322 +05:30 [INF] Application is shutting down...
+2026-03-10 21:46:44.279 +05:30 [INF] Starting application
+2026-03-10 21:46:44.324 +05:30 [INF] User profile is available. Using 'C:\Users\sasi chintada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-10 21:46:44.402 +05:30 [INF] Now listening on: http://localhost:5116
+2026-03-10 21:46:44.404 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-10 21:46:44.405 +05:30 [INF] Hosting environment: Development
+2026-03-10 21:46:44.406 +05:30 [INF] Content root path: C:\Users\sasi chintada\wandersmart\backend
+2026-03-10 21:46:47.039 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/ - null null
+2026-03-10 21:46:47.242 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-10 21:46:47.320 +05:30 [INF] Executing endpoint 'HTTP: GET /'
+2026-03-10 21:46:47.331 +05:30 [INF] Executing RedirectResult, redirecting to /swagger.
+2026-03-10 21:46:47.333 +05:30 [INF] Executed endpoint 'HTTP: GET /'
+2026-03-10 21:46:47.345 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/ - 302 0 null 303.4125ms
+2026-03-10 21:46:47.358 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/index.html - null null
+2026-03-10 21:46:47.497 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/index.html - 200 null text/html;charset=utf-8 139.2841ms
+2026-03-10 21:46:47.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - null null
+2026-03-10 21:46:47.910 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 284.449ms
+2026-03-10 21:47:14.915 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:14.922 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:15.384 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:15.390 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:15.391 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:15.523 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:15.594 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:16.011 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 1096.0881ms
+2026-03-10 21:47:16.419 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:17.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 2532.9154ms
+2026-03-10 21:47:18.348 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:19.704 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:19.717 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:19.719 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:19.769 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:19.848 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:19.849 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:19.852 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 1503.6203ms
+2026-03-10 21:47:19.850 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:19.864 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 159.4393ms
+2026-03-10 21:47:21.935 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:21.966 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:21.971 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:21.977 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:21.981 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 45.6504ms
+2026-03-10 21:47:27.861 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:27.865 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:27.866 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:27.870 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:27.880 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 18.2521ms
+2026-03-10 21:47:35.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:35.898 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:35.901 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:35.918 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:35.919 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 32.0084ms
+2026-03-10 21:47:51.996 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub - null null
+2026-03-10 21:47:52.001 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:52.003 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-10 21:47:52.009 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-10 21:47:52.012 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub - 401 0 null 15.4081ms
+2026-03-10 21:47:54.497 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:47:54.497 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:47:54.502 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:54.510 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 12.5954ms
+2026-03-10 21:47:54.511 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:54.554 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:47:54.568 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 70.6114ms
+2026-03-10 21:47:54.571 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:54.587 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:47:54.602 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:47:55.179 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:47:55.233 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:47:55.570 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:47:55.695 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 448.8289ms
+2026-03-10 21:47:55.702 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:47:55.712 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 1125.6241ms
+2026-03-10 21:47:55.946 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 1392.047ms
+2026-03-10 21:47:55.991 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:54:01.769 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - null null
+2026-03-10 21:54:01.821 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:54:01.929 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 21:54:02.132 +05:30 [INF] User 69b0164cdb7969dcb959800f connected to SignalR
+2026-03-10 21:54:40.855 +05:30 [INF] User 69b0164cdb7969dcb959800f disconnected from SignalR
+2026-03-10 21:54:40.865 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 21:54:40.870 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - 101 null null 39106.9045ms
+2026-03-10 21:54:51.996 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - null null
+2026-03-10 21:54:52.009 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:54:52.027 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 21:54:52.065 +05:30 [INF] User 69b0164cdb7969dcb959800f connected to SignalR
+2026-03-10 21:55:04.083 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:55:04.083 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:55:04.090 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:55:04.097 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 13.3344ms
+2026-03-10 21:55:04.097 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:55:04.102 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 18.8347ms
+2026-03-10 21:55:04.103 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:55:04.112 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:55:04.121 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:55:04.122 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:55:04.410 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:55:04.411 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 299.1251ms
+2026-03-10 21:55:04.420 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:55:04.438 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:55:04.711 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:55:04.728 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 281.7116ms
+2026-03-10 21:55:04.732 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:55:04.734 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 631.2862ms
+2026-03-10 21:56:35.922 +05:30 [INF] User 69b0164cdb7969dcb959800f disconnected from SignalR
+2026-03-10 21:56:35.929 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 21:56:35.930 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - 101 null null 103933.9583ms
+2026-03-10 21:56:36.213 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - null null
+2026-03-10 21:56:36.233 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:36.242 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:56:36.243 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:56:36.250 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 21:56:36.251 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:36.255 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:36.263 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 20.8975ms
+2026-03-10 21:56:36.265 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 22.2757ms
+2026-03-10 21:56:36.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:56:36.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:56:36.288 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:36.300 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:36.307 +05:30 [INF] User 69b0164cdb7969dcb959800f connected to SignalR
+2026-03-10 21:56:36.665 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:56:36.666 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 383.8275ms
+2026-03-10 21:56:36.668 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:56:36.675 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:56:36.874 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:56:36.881 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 201.1723ms
+2026-03-10 21:56:36.884 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:56:36.887 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 613.5484ms
+2026-03-10 21:56:48.998 +05:30 [INF] User 69b0164cdb7969dcb959800f disconnected from SignalR
+2026-03-10 21:56:49.002 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 21:56:49.003 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - 101 null null 12789.2506ms
+2026-03-10 21:56:49.127 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - null null
+2026-03-10 21:56:49.167 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:56:49.168 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:56:49.180 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:49.193 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:49.209 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 41.3408ms
+2026-03-10 21:56:49.204 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 21:56:49.198 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:49.235 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:56:49.243 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 75.2713ms
+2026-03-10 21:56:49.247 +05:30 [INF] User 69b0164cdb7969dcb959800f connected to SignalR
+2026-03-10 21:56:49.260 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:49.271 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:56:49.289 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:49.463 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 191.8755ms
+2026-03-10 21:56:49.463 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:56:49.473 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:56:49.477 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:56:49.666 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:56:49.671 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 171.7455ms
+2026-03-10 21:56:50.500 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:56:50.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 1336.6296ms
+2026-03-10 21:56:52.327 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - null null
+2026-03-10 21:56:52.330 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:52.336 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - 204 null null 9.4802ms
+2026-03-10 21:56:52.342 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/logout - application/json 2
+2026-03-10 21:56:52.352 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:56:52.539 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 21:56:52.587 +05:30 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:56:54.582 +05:30 [INF] User logged out: 69b0164cdb7969dcb959800f
+2026-03-10 21:56:54.598 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-10 21:56:54.649 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend) in 2058.8602ms
+2026-03-10 21:56:54.651 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 21:56:54.653 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/logout - 200 null application/json; charset=utf-8 2310.7293ms
+2026-03-10 21:56:54.695 +05:30 [INF] User 69b0164cdb7969dcb959800f disconnected from SignalR
+2026-03-10 21:56:54.715 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 21:56:54.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwMTY0Y2RiNzk2OWRjYjk1OTgwMGYiLCJ1bmlxdWVfbmFtZSI6ImFudSIsImVtYWlsIjoiYW51QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNDc3NDEsImV4cCI6MTc3MzIzNDE0MSwiaWF0IjoxNzczMTQ3NzQxLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.5-c9U35BSfzRWl515YW8nLMvJrOjrXCCNSywzifak24 - 101 null null 5588.5483ms
+2026-03-10 21:57:27.131 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - null null
+2026-03-10 21:57:27.149 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:27.152 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/register - 204 null null 20.7119ms
+2026-03-10 21:57:27.172 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/register - application/json 112
+2026-03-10 21:57:27.187 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:27.196 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:57:27.236 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.UserDTO]] Register(wanderSmart.Backend.DTOs.RegisterDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:57:29.090 +05:30 [INF] User registered successfully: vaishu
+2026-03-10 21:57:29.101 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.UserDTO'.
+2026-03-10 21:57:29.127 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend) in 1882.9294ms
+2026-03-10 21:57:29.130 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Register (wanderSmart.Backend)'
+2026-03-10 21:57:29.132 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/register - 200 null application/json; charset=utf-8 1960.4101ms
+2026-03-10 21:57:36.740 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 21:57:36.745 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:36.747 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 6.9188ms
+2026-03-10 21:57:36.764 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/login - application/json 61
+2026-03-10 21:57:36.781 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:36.789 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 21:57:36.805 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.LoginResponseDTO]] Login(wanderSmart.Backend.DTOs.LoginDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:57:37.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.LoginResponseDTO'.
+2026-03-10 21:57:37.927 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend) in 1109.5633ms
+2026-03-10 21:57:37.929 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 21:57:37.930 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/login - 200 null application/json; charset=utf-8 1166.3892ms
+2026-03-10 21:57:37.944 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:57:37.945 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:57:38.021 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:38.027 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 81.9693ms
+2026-03-10 21:57:38.015 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:38.055 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 110.8709ms
+2026-03-10 21:57:38.052 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:57:38.087 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:38.080 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:57:38.118 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:38.200 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 147.3013ms
+2026-03-10 21:57:38.338 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:57:38.312 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:57:38.363 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:57:38.614 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:57:38.618 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 234.2635ms
+2026-03-10 21:57:38.638 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:57:38.650 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 568.4829ms
+2026-03-10 21:57:38.942 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - null null
+2026-03-10 21:57:38.947 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:57:38.949 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 21:57:38.951 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 21:58:20.990 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:58:20.999 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:58:21.022 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:58:21.030 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:58:21.032 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 41.1253ms
+2026-03-10 21:58:21.038 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 21:58:21.033 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 33.8069ms
+2026-03-10 21:58:21.049 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 21:58:21.046 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:58:21.235 +05:30 [INF] CORS policy execution successful.
+2026-03-10 21:58:21.472 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 433.3945ms
+2026-03-10 21:58:21.482 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 21:58:21.714 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:58:21.718 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 21:58:21.811 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 21:58:21.816 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 91.7883ms
+2026-03-10 21:58:21.820 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 21:58:21.825 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 776.5005ms
+2026-03-10 22:01:20.255 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:01:20.262 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:01:20.266 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - 101 null null 221323.0532ms
+2026-03-10 22:01:21.114 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - null null
+2026-03-10 22:01:21.143 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:01:21.159 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:01:21.192 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:03:22.830 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:03:22.835 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:03:22.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - 101 null null 121721.2596ms
+2026-03-10 22:03:23.717 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - null null
+2026-03-10 22:03:23.720 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:03:23.723 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:03:23.755 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:07:05.104 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - null null
+2026-03-10 22:07:05.126 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:05.132 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - 204 null null 29.6475ms
+2026-03-10 22:07:05.137 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/logout - application/json 2
+2026-03-10 22:07:05.152 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:05.386 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 22:07:05.406 +05:30 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:07:05.712 +05:30 [INF] User logged out: 69b046707a4786e5466b58a5
+2026-03-10 22:07:05.736 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-10 22:07:05.760 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend) in 346.4433ms
+2026-03-10 22:07:05.764 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 22:07:05.766 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/logout - 200 null application/json; charset=utf-8 628.2444ms
+2026-03-10 22:07:05.775 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:07:05.778 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:07:05.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjEiLCJuYmYiOjE3NzMxNjAwNTcsImV4cCI6MTc3MzI0NjQ1NywiaWF0IjoxNzczMTYwMDU3LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.7bmAozVIBiZqf9huGyB26Ze6ExJjtl3AGUwwGZ0sqEE - 101 null null 222062.4271ms
+2026-03-10 22:07:08.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 22:07:08.268 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:08.269 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 17.3318ms
+2026-03-10 22:07:08.285 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/login - application/json 61
+2026-03-10 22:07:08.287 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:08.294 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 22:07:08.297 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.LoginResponseDTO]] Login(wanderSmart.Backend.DTOs.LoginDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:07:09.609 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.LoginResponseDTO'.
+2026-03-10 22:07:09.614 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend) in 1310.9088ms
+2026-03-10 22:07:09.616 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 22:07:09.617 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/login - 200 null application/json; charset=utf-8 1331.7352ms
+2026-03-10 22:07:09.678 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:07:09.678 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:07:09.681 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:09.689 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:09.703 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 25.641ms
+2026-03-10 22:07:09.705 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 26.9455ms
+2026-03-10 22:07:09.714 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:07:09.716 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:07:09.719 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:09.722 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:09.831 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 114.244ms
+2026-03-10 22:07:09.831 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:07:09.844 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:07:09.848 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:07:09.943 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:07:09.947 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 91.6354ms
+2026-03-10 22:07:09.948 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:07:09.950 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 235.7525ms
+2026-03-10 22:07:10.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:07:10.658 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:07:10.661 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:07:10.674 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:09:17.997 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:09:18.003 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:09:18.010 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 127358.6538ms
+2026-03-10 22:09:18.345 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:09:18.362 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:09:18.387 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:09:18.397 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:09:18.401 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:09:18.408 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:09:18.408 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:09:18.412 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:09:18.413 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 12.2077ms
+2026-03-10 22:09:18.413 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 16.1703ms
+2026-03-10 22:09:18.425 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:09:18.432 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:09:18.438 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:09:18.442 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:09:18.551 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 118.8318ms
+2026-03-10 22:09:18.551 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:09:18.559 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:09:18.570 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:09:18.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:09:18.679 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 100.4484ms
+2026-03-10 22:09:18.681 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:09:18.684 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 258.7727ms
+2026-03-10 22:10:03.909 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:10:03.946 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:10:03.970 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 45625.6308ms
+2026-03-10 22:10:04.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:10:04.439 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:04.449 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:10:04.464 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:10:04.464 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:10:04.467 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:10:04.471 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:04.478 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:04.482 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 18.3377ms
+2026-03-10 22:10:04.483 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 19.4574ms
+2026-03-10 22:10:04.489 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:10:04.494 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:10:04.499 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:04.514 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:04.621 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:10:04.625 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:10:04.671 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 177.338ms
+2026-03-10 22:10:04.683 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:10:04.765 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:10:04.769 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 131.7655ms
+2026-03-10 22:10:04.776 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:10:04.782 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 293.001ms
+2026-03-10 22:10:21.848 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:10:21.856 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:10:21.864 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 17444.7279ms
+2026-03-10 22:10:22.234 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:10:22.237 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:22.239 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:10:22.250 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:10:22.260 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:10:22.260 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:10:22.264 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:22.267 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:22.269 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 8.6462ms
+2026-03-10 22:10:22.270 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 9.8434ms
+2026-03-10 22:10:22.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:10:22.279 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:10:22.281 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:22.284 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:10:22.427 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:10:22.427 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 147.1463ms
+2026-03-10 22:10:22.432 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:10:22.430 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:10:22.632 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:10:22.633 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 194.576ms
+2026-03-10 22:10:22.634 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:10:22.635 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 360.6608ms
+2026-03-10 22:13:34.782 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:13:34.789 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:13:34.805 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 192571.5341ms
+2026-03-10 22:13:35.019 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:13:35.029 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:13:35.032 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:13:35.043 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:13:35.053 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:13:35.060 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:13:35.062 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:13:35.062 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 8.7532ms
+2026-03-10 22:13:35.065 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:13:35.071 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:13:35.071 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 9.7398ms
+2026-03-10 22:13:35.076 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:13:35.081 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:13:35.085 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:13:35.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 177.8611ms
+2026-03-10 22:13:35.263 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:13:35.263 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:13:35.265 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:13:35.377 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:13:35.382 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 113.8972ms
+2026-03-10 22:13:35.384 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:13:35.386 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 315.1153ms
+2026-03-10 22:14:08.595 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:14:08.596 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:14:08.598 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 33578.5111ms
+2026-03-10 22:14:11.670 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/index.html - null null
+2026-03-10 22:14:11.736 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/index.html - 200 null text/html;charset=utf-8 66.3317ms
+2026-03-10 22:14:11.879 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - null null
+2026-03-10 22:14:12.021 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 142.5253ms
+2026-03-10 22:14:49.026 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - null null
+2026-03-10 22:14:49.030 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:14:49.049 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:14:49.082 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:14:57.846 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - null null
+2026-03-10 22:14:57.871 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:14:57.877 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/logout - 204 null null 31.6799ms
+2026-03-10 22:14:57.883 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/logout - application/json 2
+2026-03-10 22:14:57.888 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:14:58.018 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 22:14:58.026 +05:30 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:14:58.496 +05:30 [INF] User logged out: 69b046707a4786e5466b58a5
+2026-03-10 22:14:58.511 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-10 22:14:58.516 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend) in 485.9528ms
+2026-03-10 22:14:58.518 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Logout (wanderSmart.Backend)'
+2026-03-10 22:14:58.521 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/logout - 200 null application/json; charset=utf-8 637.7276ms
+2026-03-10 22:14:58.529 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:14:58.538 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:14:58.540 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjIiLCJuYmYiOjE3NzMxNjA2MjksImV4cCI6MTc3MzI0NzAyOSwiaWF0IjoxNzczMTYwNjI5LCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.WhYmN4SQKdXYbaNhiTNmmpa74EXfr2YXOUdWg2pegw0 - 101 null null 9513.3917ms
+2026-03-10 22:15:19.557 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - null null
+2026-03-10 22:15:19.561 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:19.562 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login - 204 null null 4.3773ms
+2026-03-10 22:15:19.565 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Auth/login - application/json 61
+2026-03-10 22:15:19.571 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:19.574 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 22:15:19.577 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.LoginResponseDTO]] Login(wanderSmart.Backend.DTOs.LoginDTO) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:15:20.934 +05:30 [INF] Executing OkObjectResult, writing value of type 'wanderSmart.Backend.DTOs.LoginResponseDTO'.
+2026-03-10 22:15:20.943 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend) in 1360.6185ms
+2026-03-10 22:15:20.946 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.Login (wanderSmart.Backend)'
+2026-03-10 22:15:20.949 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Auth/login - 200 null application/json; charset=utf-8 1383.676ms
+2026-03-10 22:15:20.985 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:15:20.997 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:20.994 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:15:20.997 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/login-history - 204 null null 12.7513ms
+2026-03-10 22:15:21.001 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:21.005 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - null null
+2026-03-10 22:15:21.129 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Auth/activities?limit=10 - 204 null null 135.2122ms
+2026-03-10 22:15:21.146 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - null null
+2026-03-10 22:15:21.137 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:21.154 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:21.251 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:15:21.253 +05:30 [INF] Route matched with {action = "GetUserActivities", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[wanderSmart.Backend.DTOs.UserActivityDTO]]] GetUserActivities(Int32) on controller wanderSmart.Backend.Controllers.AuthController (wanderSmart.Backend).
+2026-03-10 22:15:21.256 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/login-history - 404 0 null 250.8024ms
+2026-03-10 22:15:21.263 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5116/api/Auth/login-history, Response status code: 404
+2026-03-10 22:15:21.456 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[wanderSmart.Backend.DTOs.UserActivityDTO, wanderSmart.Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-10 22:15:21.459 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend) in 198.3773ms
+2026-03-10 22:15:21.461 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.AuthController.GetUserActivities (wanderSmart.Backend)'
+2026-03-10 22:15:21.465 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/api/Auth/activities?limit=10 - 200 null application/json; charset=utf-8 318.6068ms
+2026-03-10 22:15:21.966 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - null null
+2026-03-10 22:15:21.969 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:15:21.970 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:15:21.976 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:16:06.803 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:16:06.808 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:16:06.810 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 6.3115ms
+2026-03-10 22:16:06.838 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 10033
+2026-03-10 22:16:06.846 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:16:07.213 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:16:07.289 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:16:07.517 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:16:07.598 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 298.9932ms
+2026-03-10 22:16:07.600 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:16:07.602 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 764.0455ms
+2026-03-10 22:16:25.814 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:16:25.836 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:16:25.851 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 36.5515ms
+2026-03-10 22:16:25.862 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 10033
+2026-03-10 22:16:25.869 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:16:30.548 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:16:30.552 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:16:30.586 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:16:30.591 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 11.1745ms
+2026-03-10 22:16:30.598 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:16:30.600 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 4737.6553ms
+2026-03-10 22:17:05.982 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:17:05.987 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:05.988 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 5.8256ms
+2026-03-10 22:17:06.004 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:17:06.010 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:06.297 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:06.300 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:06.315 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:06.330 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 22.7557ms
+2026-03-10 22:17:06.347 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:06.350 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 346.7741ms
+2026-03-10 22:17:06.964 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:17:06.969 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:07.217 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:07.220 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:07.237 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:07.246 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 14.6071ms
+2026-03-10 22:17:07.254 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:07.259 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 295.2188ms
+2026-03-10 22:17:08.105 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 607
+2026-03-10 22:17:08.111 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:08.341 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:08.368 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:08.373 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:08.378 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 6.7425ms
+2026-03-10 22:17:08.389 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:08.392 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 287.0677ms
+2026-03-10 22:17:10.242 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:17:10.246 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:10.493 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:10.497 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:10.518 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:10.520 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 15.1536ms
+2026-03-10 22:17:10.550 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:10.552 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 309.7565ms
+2026-03-10 22:17:24.059 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:17:24.064 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:24.065 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 5.6896ms
+2026-03-10 22:17:24.073 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:17:24.080 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:24.343 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:24.346 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:24.353 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:24.357 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 5.4229ms
+2026-03-10 22:17:24.367 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:24.370 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 296.6588ms
+2026-03-10 22:17:24.740 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 607
+2026-03-10 22:17:24.745 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:17:24.932 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:24.936 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:17:24.967 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:17:24.971 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 15.1292ms
+2026-03-10 22:17:24.986 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:17:24.988 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 247.2816ms
+2026-03-10 22:20:07.946 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:20:07.952 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:20:07.962 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - 101 null null 285995.2774ms
+2026-03-10 22:20:08.464 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - null null
+2026-03-10 22:20:08.477 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:08.493 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:20:08.554 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:20:20.409 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:20:20.414 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:20.417 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 8.5283ms
+2026-03-10 22:20:20.452 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:20:20.455 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:21.245 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:20:21.249 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:21.808 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:21.821 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:20:21.841 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:20:21.854 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 23.7445ms
+2026-03-10 22:20:21.868 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:21.870 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 1417.3489ms
+2026-03-10 22:20:22.188 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:22.192 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:20:22.200 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:20:22.217 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 19.2654ms
+2026-03-10 22:20:22.220 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:22.227 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 976.9388ms
+2026-03-10 22:20:38.133 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:20:38.137 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:38.139 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 5.4889ms
+2026-03-10 22:20:38.142 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 607
+2026-03-10 22:20:38.155 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:20:38.254 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:38.255 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:20:38.265 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:20:38.268 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 6.5269ms
+2026-03-10 22:20:38.269 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:20:38.270 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 128.234ms
+2026-03-10 22:22:51.708 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:22:51.711 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:22:51.712 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - 101 null null 163247.7769ms
+2026-03-10 22:22:52.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - null null
+2026-03-10 22:22:52.834 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:22:52.837 +05:30 [INF] Executing endpoint '/notificationHub'
+2026-03-10 22:22:52.860 +05:30 [INF] User 69b046707a4786e5466b58a5 connected to SignalR
+2026-03-10 22:30:02.634 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - null null
+2026-03-10 22:30:02.646 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:30:02.648 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5116/api/Itinerary - 204 null null 13.7507ms
+2026-03-10 22:30:02.653 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 607
+2026-03-10 22:30:02.658 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:30:04.298 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5116/api/Itinerary - application/json 561
+2026-03-10 22:30:04.305 +05:30 [INF] CORS policy execution successful.
+2026-03-10 22:30:32.745 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:30:32.759 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:30:32.816 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:30:32.827 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 61.9577ms
+2026-03-10 22:30:32.831 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:30:32.833 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 30179.2337ms
+2026-03-10 22:30:34.317 +05:30 [INF] Executing endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:30:34.320 +05:30 [INF] Route matched with {action = "CreateItinerary", controller = "Itinerary"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[wanderSmart.Backend.DTOs.ItineraryResponseDTO]] CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO) on controller wanderSmart.Backend.Controllers.ItineraryController (wanderSmart.Backend).
+2026-03-10 22:30:34.333 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-10 22:30:34.368 +05:30 [INF] Executed action wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend) in 43.4948ms
+2026-03-10 22:30:34.519 +05:30 [INF] Executed endpoint 'wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary (wanderSmart.Backend)'
+2026-03-10 22:30:34.520 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5116/api/Itinerary - 400 null application/problem+json; charset=utf-8 30221.6833ms
+2026-03-10 22:32:16.200 +05:30 [INF] User 69b046707a4786e5466b58a5 disconnected from SignalR
+2026-03-10 22:32:16.203 +05:30 [INF] Executed endpoint '/notificationHub'
+2026-03-10 22:32:16.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5116/notificationHub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2OWIwNDY3MDdhNDc4NmU1NDY2YjU4YTUiLCJ1bmlxdWVfbmFtZSI6InZhaXNodSIsImVtYWlsIjoidmFpc2h1QGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiTG9naW5Db3VudCI6IjMiLCJuYmYiOjE3NzMxNjExMjAsImV4cCI6MTc3MzI0NzUyMCwiaWF0IjoxNzczMTYxMTIwLCJpc3MiOiJXYW5kZXJTbWFydCIsImF1ZCI6IldhbmRlclNtYXJ0Q2xpZW50In0.eHimzPSzPJ06ujOViMdscjnDB9v1LJSzY1ynC3iRKdM - 101 null null 563380.3421ms

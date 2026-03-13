@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jakrCl38VdeOwEKIgCx5vI9EThTuCbVVxmNPTzfT6kg=",
+  "Source": "wanderSmart.Backend",
+  "BasePath": "_content/wanderSmart.Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

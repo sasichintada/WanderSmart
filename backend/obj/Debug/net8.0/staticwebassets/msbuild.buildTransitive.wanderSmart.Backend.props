@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\wanderSmart.Backend.props" />
+</Project>

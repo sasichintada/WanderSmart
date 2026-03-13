@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wanderSmart.Backend", "backend\wanderSmart.Backend.csproj", "{EADF4D7A-E252-4065-9EF4-F421ED0EBA6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EADF4D7A-E252-4065-9EF4-F421ED0EBA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADF4D7A-E252-4065-9EF4-F421ED0EBA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADF4D7A-E252-4065-9EF4-F421ED0EBA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADF4D7A-E252-4065-9EF4-F421ED0EBA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

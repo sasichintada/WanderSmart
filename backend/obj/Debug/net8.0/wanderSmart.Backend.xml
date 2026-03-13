@@ -1,0 +1,1419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>wanderSmart.Backend</name>
+    </assembly>
+    <members>
+        <member name="T:wanderSmart.Backend.Controllers.AuthController">
+            <summary>
+            Handles user authentication including registration, login, logout, and profile management
+            </summary>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.Register(wanderSmart.Backend.DTOs.RegisterDTO)">
+            <summary>
+            Register a new user account
+            </summary>
+            <param name="registerDto">User registration information</param>
+            <returns>The newly created user profile</returns>
+            <response code="200">Returns the newly created user</response>
+            <response code="400">If the user data is invalid or email already exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.Login(wanderSmart.Backend.DTOs.LoginDTO)">
+            <summary>
+            Login user and get authentication token
+            </summary>
+            <param name="loginDto">Login credentials (username/email and password)</param>
+            <returns>JWT token and user information</returns>
+            <response code="200">Returns JWT token and user info</response>
+            <response code="401">If credentials are invalid</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.Logout">
+            <summary>
+            Logout current user and invalidate session
+            </summary>
+            <returns>Success message</returns>
+            <response code="200">Successfully logged out</response>
+            <response code="401">If user is not authenticated</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.GetCurrentUser">
+            <summary>
+            Get current authenticated user information
+            </summary>
+            <returns>Current user profile</returns>
+            <response code="200">Returns user profile</response>
+            <response code="401">If user is not authenticated</response>
+            <response code="404">If user not found</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.GetUserActivities(System.Int32)">
+            <summary>
+            Get user activity history
+            </summary>
+            <param name="limit">Maximum number of activities to return (default: 50)</param>
+            <returns>List of user activities</returns>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.GetUserActivityStats">
+            <summary>
+            Get user activity statistics
+            </summary>
+            <returns>Dictionary of activity types and counts</returns>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.AuthController.RefreshToken">
+            <summary>
+            Refresh authentication token
+            </summary>
+            <returns>New JWT token</returns>
+        </member>
+        <member name="T:wanderSmart.Backend.Controllers.CityController">
+            <summary>
+            Manages city information, attractions, and local data
+            </summary>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.CityController.GetCityDetails(System.String,System.String)">
+            <summary>
+            Get detailed information about a specific city including attractions, food, transport, and suggested itineraries
+            </summary>
+            <param name="city">Name of the city (e.g., Mumbai, Delhi, Bangalore)</param>
+            <param name="state">State name (optional, for disambiguation)</param>
+            <returns>Complete city information with attractions, food, transport options, and suggested itineraries</returns>
+            <response code="200">Returns city details successfully</response>
+            <response code="500">If there's an error fetching city data</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.CityController.GetMetroCities">
+            <summary>
+            Get a list of major metro cities in India
+            </summary>
+            <returns>List of metro cities with their names, states, and codes</returns>
+            <response code="200">Returns list of metro cities</response>
+        </member>
+        <member name="T:wanderSmart.Backend.Controllers.ImageController">
+            <summary>
+            Handles image searches and retrieval for cities and destinations
+            </summary>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ImageController.SearchCityImages(System.String,System.Int32)">
+            <summary>
+            Search for images of a specific city
+            </summary>
+            <param name="city">City name to search for (e.g., Mumbai, Delhi, Bangalore)</param>
+            <param name="count">Number of images to return (default: 4, max: 10)</param>
+            <returns>List of city images with photographer details</returns>
+            <response code="200">Returns list of city images</response>
+            <response code="500">If there's an error fetching images</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ImageController.GetDestinationImages">
+            <summary>
+            Get representative images for popular destinations
+            </summary>
+            <returns>List of destinations with one image each</returns>
+            <response code="200">Returns destination images</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ImageController.GetFallbackImage(System.String)">
+            <summary>
+            Get fallback image for a city when API fails
+            </summary>
+            <param name="city">City name</param>
+            <returns>Fallback image object</returns>
+        </member>
+        <member name="T:wanderSmart.Backend.Controllers.ItineraryController">
+            <summary>
+            Manages travel itineraries including creation, retrieval, updates, and AI-powered generation
+            </summary>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.GenerateItinerary(wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO)">
+            <summary>
+            Generate a new AI-powered itinerary based on destination and preferences
+            </summary>
+            <param name="request">Travel details including destination, dates, budget, and preferences</param>
+            <returns>AI-generated itinerary with day-by-day plan</returns>
+            <response code="200">Returns the generated itinerary</response>
+            <response code="401">If user is not authenticated</response>
+            <response code="500">If there was an error generating the itinerary</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.GetMyItineraries">
+            <summary>
+            Get all itineraries for the current user
+            </summary>
+            <returns>List of user's itineraries</returns>
+            <response code="200">Returns list of itineraries</response>
+            <response code="401">If user is not authenticated</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.CreateItinerary(wanderSmart.Backend.DTOs.CreateItineraryDTO)">
+            <summary>
+            Create a new custom itinerary manually
+            </summary>
+            <param name="createDto">Itinerary details including days and activities</param>
+            <returns>Created itinerary</returns>
+            <response code="201">Returns the newly created itinerary</response>
+            <response code="400">If the itinerary data is invalid</response>
+            <response code="401">If user is not authenticated</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.GetPublicItineraries(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get public itineraries that are shared by other users
+            </summary>
+            <param name="destination">Filter by destination (optional)</param>
+            <param name="page">Page number for pagination (default: 1)</param>
+            <param name="pageSize">Items per page (default: 10)</param>
+            <returns>List of public itineraries</returns>
+            <response code="200">Returns list of public itineraries</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.GetItinerary(System.String)">
+            <summary>
+            Get a specific itinerary by ID
+            </summary>
+            <param name="id">Itinerary ID</param>
+            <returns>Itinerary details</returns>
+            <response code="200">Returns the itinerary</response>
+            <response code="401">If user is not authenticated</response>
+            <response code="403">If user doesn't have permission to view this itinerary</response>
+            <response code="404">If itinerary not found</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.UpdateItinerary(System.String,wanderSmart.Backend.DTOs.UpdateItineraryDTO)">
+            <summary>
+            Update an existing itinerary
+            </summary>
+            <param name="id">Itinerary ID</param>
+            <param name="updateDto">Updated itinerary data</param>
+            <returns>Updated itinerary</returns>
+            <response code="200">Returns the updated itinerary</response>
+            <response code="401">If user is not authenticated</response>
+            <response code="403">If user doesn't have permission to update this itinerary</response>
+            <response code="404">If itinerary not found</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.DeleteItinerary(System.String)">
+            <summary>
+            Delete an itinerary
+            </summary>
+            <param name="id">Itinerary ID</param>
+            <returns>No content if successful</returns>
+            <response code="204">If itinerary was successfully deleted</response>
+            <response code="401">If user is not authenticated</response>
+            <response code="403">If user doesn't have permission to delete this itinerary</response>
+            <response code="404">If itinerary not found</response>
+        </member>
+        <member name="M:wanderSmart.Backend.Controllers.ItineraryController.LikeItinerary(System.String)">
+            <summary>
+            Like or unlike an itinerary
+            </summary>
+            <param name="id">Itinerary ID</param>
+            <returns>Success message</returns>
+            <response code="200">If like/unlike was successful</response>
+            <response code="400">If unable to like the itinerary</response>
+            <response code="401">If user is not authenticated</response>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.RegisterDTO">
+            <summary>
+            User registration request DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.RegisterDTO.Email">
+            <summary>
+            User's email address (must be unique)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.RegisterDTO.Username">
+            <summary>
+            Unique username for the user
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.RegisterDTO.Password">
+            <summary>
+            Password (minimum 6 characters)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.RegisterDTO.FirstName">
+            <summary>
+            User's first name (optional)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.RegisterDTO.LastName">
+            <summary>
+            User's last name (optional)
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.LoginDTO">
+            <summary>
+            Login request DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginDTO.UsernameOrEmail">
+            <summary>
+            Username or email address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginDTO.Password">
+            <summary>
+            User password
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.LoginResponseDTO">
+            <summary>
+            Login response DTO with JWT token
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginResponseDTO.Token">
+            <summary>
+            JWT access token
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginResponseDTO.RefreshToken">
+            <summary>
+            Refresh token for getting new access tokens
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginResponseDTO.ExpiresAt">
+            <summary>
+            Token expiration date and time
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginResponseDTO.User">
+            <summary>
+            User information
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.UserDTO">
+            <summary>
+            User profile DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.Id">
+            <summary>
+            Unique user identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.Email">
+            <summary>
+            User email address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.Username">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.FirstName">
+            <summary>
+            First name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.LastName">
+            <summary>
+            Last name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.FullName">
+            <summary>
+            Full name (combination of first and last name)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.Role">
+            <summary>
+            User role (e.g., "User", "Admin")
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.LoginCount">
+            <summary>
+            Number of times user has logged in
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.LastLoginAt">
+            <summary>
+            Last login timestamp
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserDTO.Preferences">
+            <summary>
+            User preferences for travel
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.UserPreferencesDTO">
+            <summary>
+            User preferences for travel planning
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserPreferencesDTO.BudgetLevel">
+            <summary>
+            Budget level (Low, Medium, High, Luxury)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserPreferencesDTO.PreferredTravelStyles">
+            <summary>
+            Preferred travel styles (Adventure, Relaxation, Cultural, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserPreferencesDTO.PreferredActivities">
+            <summary>
+            Preferred activities (Sightseeing, Shopping, Food, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserPreferencesDTO.FavoriteDestinations">
+            <summary>
+            Favorite destinations
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserPreferencesDTO.Currency">
+            <summary>
+            Preferred currency (INR, USD, EUR, etc.)
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.UserActivityDTO">
+            <summary>
+            User activity log DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserActivityDTO.Id">
+            <summary>
+            Activity identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserActivityDTO.ActivityType">
+            <summary>
+            Type of activity (Login, ItineraryCreated, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserActivityDTO.Description">
+            <summary>
+            Activity description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserActivityDTO.Timestamp">
+            <summary>
+            When the activity occurred
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UserActivityDTO.Metadata">
+            <summary>
+            Additional metadata about the activity
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.LoginHistoryDTO">
+            <summary>
+            Login history record DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.Id">
+            <summary>
+            Login record identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.LoginTime">
+            <summary>
+            Login timestamp
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.LogoutTime">
+            <summary>
+            Logout timestamp (if applicable)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.IpAddress">
+            <summary>
+            IP address of the login
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.DeviceInfo">
+            <summary>
+            Device information
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.Location">
+            <summary>
+            Geographic location
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.LoginHistoryDTO.IsSuccessful">
+            <summary>
+            Whether the login was successful
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.CityDetailsResponseDTO">
+            <summary>
+            Complete city details response
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.City">
+            <summary>
+            City name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.State">
+            <summary>
+            State name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.HeroImage">
+            <summary>
+            Hero image URL for the city
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.Attractions">
+            <summary>
+            List of tourist attractions
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.Food">
+            <summary>
+            List of local food items
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.Transport">
+            <summary>
+            Transport options available
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.Stats">
+            <summary>
+            City statistics
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityDetailsResponseDTO.Itinerary">
+            <summary>
+            Suggested itineraries
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.AttractionDTO">
+            <summary>
+            Tourist attraction details
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Name">
+            <summary>
+            Attraction name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Category">
+            <summary>
+            Category (Landmark, Heritage, Nature, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Description">
+            <summary>
+            Detailed description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Time">
+            <summary>
+            Time needed to visit
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Price">
+            <summary>
+            Entry price
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Image">
+            <summary>
+            Image URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Rating">
+            <summary>
+            Rating out of 5
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Latitude">
+            <summary>
+            Latitude coordinate
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.AttractionDTO.Longitude">
+            <summary>
+            Longitude coordinate
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.FoodItemDTO">
+            <summary>
+            Local food item details
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Name">
+            <summary>
+            Food item name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Description">
+            <summary>
+            Description of the dish
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Price">
+            <summary>
+            Approximate price
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Image">
+            <summary>
+            Food image URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Cuisine">
+            <summary>
+            Cuisine type
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.FoodItemDTO.Rating">
+            <summary>
+            Rating out of 5
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.TransportOptionDTO">
+            <summary>
+            Transport option details
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.TransportOptionDTO.Type">
+            <summary>
+            Transport type (train, bus, taxi, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.TransportOptionDTO.Name">
+            <summary>
+            Transport service name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.TransportOptionDTO.Description">
+            <summary>
+            Description of the transport option
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.TransportOptionDTO.Price">
+            <summary>
+            Price range
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.CityStatsDTO">
+            <summary>
+            City statistics
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityStatsDTO.Attractions">
+            <summary>
+            Number of attractions
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityStatsDTO.Hotels">
+            <summary>
+            Number of hotels
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityStatsDTO.Food">
+            <summary>
+            Number of food options
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.ItinerarySuggestionDTO">
+            <summary>
+            Suggested itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItinerarySuggestionDTO.Title">
+            <summary>
+            Itinerary title
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItinerarySuggestionDTO.Activities">
+            <summary>
+            List of activities in the itinerary
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.ActivityItemDTO">
+            <summary>
+            Individual activity in an itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityItemDTO.Time">
+            <summary>
+            Time of the activity
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityItemDTO.Type">
+            <summary>
+            Activity type (visit, food, travel, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityItemDTO.Description">
+            <summary>
+            Activity description
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.CityImageResponseDTO">
+            <summary>
+            City image response
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Id">
+            <summary>
+            Unique identifier for the image
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Description">
+            <summary>
+            Description or alt text for the image
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Url">
+            <summary>
+            High-resolution image URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Thumbnail">
+            <summary>
+            Thumbnail image URL for previews
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Photographer">
+            <summary>
+            Name of the photographer
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.PhotographerLink">
+            <summary>
+            Link to photographer's Unsplash profile
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityImageResponseDTO.Link">
+            <summary>
+            Link to the image on Unsplash
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.DestinationImageResponseDTO">
+            <summary>
+            Destination image response
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DestinationImageResponseDTO.City">
+            <summary>
+            Name of the city or destination
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DestinationImageResponseDTO.Images">
+            <summary>
+            List of images for the destination
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.MetroCityDTO">
+            <summary>
+            Metro city information
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.MetroCityDTO.Name">
+            <summary>
+            City name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.MetroCityDTO.State">
+            <summary>
+            State name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.MetroCityDTO.Code">
+            <summary>
+            City code for API calls
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.CreateItineraryDTO">
+            <summary>
+            Request DTO for creating a new itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.Title">
+            <summary>
+            Itinerary title
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.Destination">
+            <summary>
+            Destination city
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.Description">
+            <summary>
+            Itinerary description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.StartDate">
+            <summary>
+            Start date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.EndDate">
+            <summary>
+            End date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.TotalBudget">
+            <summary>
+            Total budget for the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.BudgetLevel">
+            <summary>
+            Budget level (Low, Medium, High, Luxury)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.TravelStyle">
+            <summary>
+            Travel style (Adventure, Relaxation, Cultural, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.Tags">
+            <summary>
+            Tags for the itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.IsPublic">
+            <summary>
+            Whether the itinerary is public
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CreateItineraryDTO.Days">
+            <summary>
+            Day-by-day plan
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.UpdateItineraryDTO">
+            <summary>
+            Request DTO for updating an itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.Title">
+            <summary>
+            Itinerary title
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.Description">
+            <summary>
+            Itinerary description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.StartDate">
+            <summary>
+            Start date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.EndDate">
+            <summary>
+            End date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.TotalBudget">
+            <summary>
+            Total budget for the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.BudgetLevel">
+            <summary>
+            Budget level (Low, Medium, High, Luxury)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.TravelStyle">
+            <summary>
+            Travel style (Adventure, Relaxation, Cultural, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.Tags">
+            <summary>
+            Tags for the itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.IsPublic">
+            <summary>
+            Whether the itinerary is public
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.UpdateItineraryDTO.Days">
+            <summary>
+            Day-by-day plan
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.ItineraryResponseDTO">
+            <summary>
+            Response DTO for itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Id">
+            <summary>
+            Itinerary identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.UserId">
+            <summary>
+            User ID who created the itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.UserName">
+            <summary>
+            Username of the creator
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Title">
+            <summary>
+            Itinerary title
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Destination">
+            <summary>
+            Destination city
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Description">
+            <summary>
+            Itinerary description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.StartDate">
+            <summary>
+            Start date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.EndDate">
+            <summary>
+            End date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Duration">
+            <summary>
+            Duration of the trip in days
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.TotalBudget">
+            <summary>
+            Total budget for the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.BudgetLevel">
+            <summary>
+            Budget level (Low, Medium, High, Luxury)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.TravelStyle">
+            <summary>
+            Travel style (Adventure, Relaxation, Cultural, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Days">
+            <summary>
+            Day-by-day plan
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Tags">
+            <summary>
+            Tags for the itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.IsPublic">
+            <summary>
+            Whether the itinerary is public
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Views">
+            <summary>
+            Number of views
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.Likes">
+            <summary>
+            Number of likes
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ItineraryResponseDTO.CreatedAt">
+            <summary>
+            Creation timestamp
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.DayPlanDTO">
+            <summary>
+            Day plan DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DayPlanDTO.DayNumber">
+            <summary>
+            Day number (1, 2, 3, etc.)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DayPlanDTO.Date">
+            <summary>
+            Date of the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DayPlanDTO.Theme">
+            <summary>
+            Theme of the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DayPlanDTO.Activities">
+            <summary>
+            Activities planned for the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.DayPlanDTO.Notes">
+            <summary>
+            Additional notes
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.ActivityDTO">
+            <summary>
+            Activity DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Id">
+            <summary>
+            Activity identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Name">
+            <summary>
+            Activity name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Description">
+            <summary>
+            Activity description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.StartTime">
+            <summary>
+            Start time (HH:MM format)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.EndTime">
+            <summary>
+            End time (HH:MM format)
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Location">
+            <summary>
+            Location name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Latitude">
+            <summary>
+            Latitude coordinate
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Longitude">
+            <summary>
+            Longitude coordinate
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Cost">
+            <summary>
+            Cost of the activity
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.Category">
+            <summary>
+            Activity category
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.ImageUrl">
+            <summary>
+            Image URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.IsBooked">
+            <summary>
+            Whether the activity is booked
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.ActivityDTO.BookingReference">
+            <summary>
+            Booking reference number
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO">
+            <summary>
+            Request DTO for generating an AI itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.Destination">
+            <summary>
+            Destination city
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.StartDate">
+            <summary>
+            Start date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.EndDate">
+            <summary>
+            End date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.Travelers">
+            <summary>
+            Number of travelers
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.Budget">
+            <summary>
+            Total budget
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GenerateItineraryRequestDTO.Preferences">
+            <summary>
+            Travel preferences (e.g., "adventure", "food", "history")
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO">
+            <summary>
+            Response DTO for generated itinerary
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Id">
+            <summary>
+            Itinerary identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Title">
+            <summary>
+            Itinerary title
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Destination">
+            <summary>
+            Destination city
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Description">
+            <summary>
+            Itinerary description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.StartDate">
+            <summary>
+            Start date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.EndDate">
+            <summary>
+            End date of the trip
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Duration">
+            <summary>
+            Duration in days
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.TotalBudget">
+            <summary>
+            Total budget
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.BudgetLevel">
+            <summary>
+            Budget level
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.TravelStyle">
+            <summary>
+            Travel style
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Days">
+            <summary>
+            Day-by-day plan
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedItineraryResponseDTO.Tags">
+            <summary>
+            Tags for the itinerary
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO">
+            <summary>
+            Generated day plan DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.DayNumber">
+            <summary>
+            Day number
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.Date">
+            <summary>
+            Date of the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.Theme">
+            <summary>
+            Theme of the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.Activities">
+            <summary>
+            Activities for the day
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.Notes">
+            <summary>
+            Additional notes
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedDayPlanDTO.DailyTotal">
+            <summary>
+            Total cost for the day
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeneratedActivityDTO">
+            <summary>
+            Generated activity DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Id">
+            <summary>
+            Activity identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Name">
+            <summary>
+            Activity name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Description">
+            <summary>
+            Activity description
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Location">
+            <summary>
+            Location name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Address">
+            <summary>
+            Full address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Latitude">
+            <summary>
+            Latitude coordinate
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Longitude">
+            <summary>
+            Longitude coordinate
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Cost">
+            <summary>
+            Cost of the activity
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Category">
+            <summary>
+            Activity category
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.ImageUrl">
+            <summary>
+            Image URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Rating">
+            <summary>
+            Rating out of 5
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Phone">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeneratedActivityDTO.Website">
+            <summary>
+            Website URL
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeoapifyResponse">
+            <summary>
+            Geoapify API response DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyResponse.Type">
+            <summary>
+            Response type
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyResponse.Features">
+            <summary>
+            List of features
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeoapifyFeature">
+            <summary>
+            Geoapify feature DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyFeature.Type">
+            <summary>
+            Feature type
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyFeature.Properties">
+            <summary>
+            Feature properties
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyFeature.Geometry">
+            <summary>
+            Feature geometry
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeoapifyProperties">
+            <summary>
+            Geoapify properties DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Name">
+            <summary>
+            Place name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Street">
+            <summary>
+            Street address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.State">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Country">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Postcode">
+            <summary>
+            Postal code
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Formatted">
+            <summary>
+            Formatted address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.AddressLine1">
+            <summary>
+            Address line 1
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.AddressLine2">
+            <summary>
+            Address line 2
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Categories">
+            <summary>
+            Categories
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.PlaceId">
+            <summary>
+            Place identifier
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Lat">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Lon">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Phone">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Website">
+            <summary>
+            Website URL
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.OpeningHours">
+            <summary>
+            Opening hours
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Rating">
+            <summary>
+            Rating out of 5
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyProperties.Reviews">
+            <summary>
+            Number of reviews
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.GeoapifyGeometry">
+            <summary>
+            Geoapify geometry DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyGeometry.Type">
+            <summary>
+            Geometry type
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.GeoapifyGeometry.Coordinates">
+            <summary>
+            Coordinates [longitude, latitude]
+            </summary>
+        </member>
+        <member name="T:wanderSmart.Backend.DTOs.CityCoordinates">
+            <summary>
+            City coordinates DTO
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityCoordinates.City">
+            <summary>
+            City name
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityCoordinates.Lat">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:wanderSmart.Backend.DTOs.CityCoordinates.Lon">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="M:wanderSmart.Backend.Services.UnsplashService.SearchCityImages(System.String,System.Int32)">
+            <summary>
+            Search for images of a specific city
+            </summary>
+            <param name="city">City name to search for</param>
+            <param name="count">Number of images to return</param>
+            <returns>List of city images with photographer details</returns>
+        </member>
+    </members>
+</doc>

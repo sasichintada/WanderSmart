@@ -1,0 +1,29 @@
+{
+  "/foursquare": {
+    "target": "https://api.foursquare.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/foursquare": "/v3"
+    },
+    "logLevel": "debug"
+  },
+  "/geoapify": {
+    "target": "https://api.geoapify.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/geoapify": "/v2"
+    },
+    "logLevel": "debug"
+  },
+  "/unsplash": {
+    "target": "https://api.unsplash.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/unsplash": ""
+    },
+    "logLevel": "debug"
+  }
+}
