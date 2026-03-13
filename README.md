@@ -190,5 +190,9 @@ ng serve
 
 **Sasi Chintada**
 
+## 📄 License
+
+This project is licensed under the MIT License.
+
 ---
 
